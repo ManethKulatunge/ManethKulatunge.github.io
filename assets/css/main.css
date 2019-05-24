@@ -175,6 +175,7 @@ input, select, textarea {
 	}
 
 		h1 a {
+			font-weight: 500;
 			color: inherit;
 		}
 
