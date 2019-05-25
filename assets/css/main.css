@@ -198,6 +198,10 @@ input, select, textarea {
  			 color:#F2C028;
 		}
 
+		.Hello{
+  			color:#29AC68;
+		}
+
 		@media screen and (max-width: 736px) {
 
 			h1 {
