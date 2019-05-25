@@ -3326,3 +3326,8 @@ input, select, textarea {
 			}
 
 		}
+
+.socialMediaButtons .buttons {
+		display: inline-block;
+		padding: 15px; 
+}
