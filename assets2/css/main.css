@@ -2697,49 +2697,49 @@ input, select, textarea {
 		.panel.color1 {
 			background-image: url("../../images3/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 			background-size: 128px 128px, auto;
-			background-color: #726193;
+			background-color: #000000;
 		}
 
 		.panel.color2 {
 			background-image: url("../../images3/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 			background-size: 128px 128px, auto;
-			background-color: #e37b7c;
+			background-color: #000000;
 		}
 
 		.panel.color3 {
 			background-image: url("../../images3/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 			background-size: 128px 128px, auto;
-			background-color: #ffe4b4;
+			background-color: #000000;
 		}
 
 		.panel.color4 {
 			background-image: url("../../images3/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
 			background-size: 128px 128px, auto;
-			background-color: #353865;
+			background-color: #000000;
 		}
 
 		.panel.color1-alt {
 			background-image: url("../../images3/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
 			background-size: 128px 128px, auto;
-			background-color: #6c5e86;
+			background-color: #000000;
 		}
 
 		.panel.color2-alt {
 			background-image: url("../../images3/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
 			background-size: 128px 128px, auto;
-			background-color: #de7172;
+			background-color: #000000;
 		}
 
 		.panel.color3-alt {
 			background-image: url("../../images3/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
 			background-size: 128px 128px, auto;
-			background-color: #fedea6;
+			background-color: #000000;
 		}
 
 		.panel.color4-alt {
 			background-image: url("../../images3/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
 			background-size: 128px 128px, auto;
-			background-color: #323459;
+			background-color: #000000;
 		}
 
 	@media screen and (max-width: 736px) {
