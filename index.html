@@ -1,244 +1,69 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Maneth Kulatunge</title>
-		<link rel='shortcut icon' type='image/x-icon' href='mk.png'/> 
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo-container">
+            <a href="#home" class="nav-logo">
+                <img src="your-image.jpg" alt="Maneth" class="nav-profile-image">
+            </a>
+            <div class="random-blurb"></div>
+        </div>
+        <div class="nav-links">
+            <a href="#work" style="margin-right: 2rem;">work</a>
+            <a href="thoughts.html" style="margin-right: 2rem;">thoughts</a>
+        </div>
+    </nav>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+    <section class="intro">
+        <div class="intro-content">
+            <h1>Hi! I'm <span class="highlight">Maneth</span></h1>
+            <div class="location">📍 Calgary, AB 🇨🇦</div>
+            <div class="bio">
+                Software Engineer II at Morgan Stanley 💻<br>
+                Sri Lankan 🇱🇰
+            </div>
+            <div class="social-icons">
+                 <a href="path-to-your-resume.pdf" target="_blank" class="social-icon">
+                    <i class="far fa-file-lines"></i>
+                </a>
+                <a href="https://linkedin.com/in/your-profile" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@your-channel" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-							     <span class="socialMediaButtons">
-                 						 <li id="two" class="animated zoomInUp buttons hvr-grow2"><a href="Maneth Kulatunge - Resume.pdf" target="_blank" id="resume" class="hvr-grow"><img src="images2/index.svg" height="30px" class="animated zoomIn"></a></li>                  
-                 						 <li id="three" class="animated zoomInUp buttons hvr-grow2"><a href="https://github.com/ManethKulatunge" target="_blank"><img src="images2/git.svg" height="30px"></a></li>
-              						         <li id="four" class="animated zoomInUp buttons hvr-grow2"><a href="https://www.linkedin.com/in/manethk/" target="_blank"><img src="images2/linkedin.png" height="30px"></a></li>
-                 						 <li id="four" class="animated zoomInUp buttons hvr-grow2"><a href="https://www.youtube.com/channel/UCGwU2qeKki6vpFP2XpP2SNQ?view_as=subscriber" target="_blank"><img src="images2/youtub2.png" height="30px"></a></li>
-							     </span>
+    <script>
+        const blurbs = [
+            "Coffee enthusiast ☕",
+            "Code wizard 🧙‍♂️",
+            "Problem solver 🔍",
+            "Tech explorer 🚀",
+            "Always learning 📚",
+            "Design thinker 🎨",
+            "Bug hunter 🐛",
+            "Innovation seeker 💡",
+            "Digital craftsman 🛠️",
+            "Web architect 🏗️"
+        ];
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+        const blurbElement = document.querySelector('.random-blurb');
+        const logoElement = document.querySelector('.nav-logo');
 
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="Maneth Kulatunge - Resume.pdf" target="_blank">Resume</a></li>
-							<li><a href="experience.html">Experience</a></li>
-							<li><a href="projects.html" target="_blank">Projects</a></li>
-							<li><a href="https://medium.com/@manethkulatunge" target="_blank">Blog</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>Hi! I am Maneth Kulatunge</h1>
-                						<h1 class="smaller"> I am super passionate about <a class="tech" href=https://devpost.com/ManethKulatunge> Technology</a></h1>
-								<h1 class="smaller"> Currently a Summer Software Development Analyst at <a class="geotab" href="https://www.citi.com/"> Citi </a>
-               						        <h1 class="smaller"> Approaching my final year at <a class="McGill" href=https://www.mcgill.ca> McGill University</a></h1>
-								<h1 class="smaller"> Always looking forward to connect and collaborate. Say <a class="Hello" href="mailto:maneth.kulatunge@mail.mcgill.ca?subject=subject text" > hello</a>!</h1><br>
-							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<a href="experience.html">
-										<h2>Experience</h2>
-										<!--<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div> -->
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<a href="projects.html">
-										<h2>Projects</h2>
-										<!--<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div> -->
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<a href="https://medium.com/@manethkulatunge" target="_blank">
-										<h2>Blog</h2>
-										<!--<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div> -->
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<a href="entrep.html">
-										<h2>Entrepreneurship</h2>
-										<!--<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div> -->
-									</a>
-								</article>
-	
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<a href="kongtent.html">
-										<h2>Kongtent</h2>
-										<!--<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div> -->
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<a href="https://manethphotography.wordpress.com/" target="_blank">
-										<h2>Photography</h2>
-										<!--<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div> -->
-									</a>
-								</article>
-								<!--<article class="style2">
-									<span class="image">
-										<img src="images/pic07.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ipsum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dolor</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic09.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Nullam</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ultricies</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic11.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dictum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic12.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Pretium</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article> -->
-							</section>
-						</div>
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-						<!--	<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="maneth.kula">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section> -->
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="https://twitter.com/KulatungeManeth" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/profile.php?id=100000338340777" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/daddymaneth/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								</ul>
-							</section>
-						</div>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        logoElement.addEventListener('mouseenter', () => {
+            const randomIndex = Math.floor(Math.random() * blurbs.length);
+            blurbElement.textContent = blurbs[randomIndex];
+        });
+    </script>
+</body>
 </html>
