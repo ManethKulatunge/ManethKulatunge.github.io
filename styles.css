@@ -107,413 +107,32 @@ h1 {
 
 /* Resume Review Styles */
 .resume-review-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
+.resume-review-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .service-description {
-    margin-bottom: 3rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
 }
 
 .service-description p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.service-highlights {
-    background: #f8f8f8;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-}
-
-.service-highlights h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.service-highlights ul {
-    list-style-position: inside;
-    margin-left: 1rem;
-}
-
-.service-highlights li {
-    margin-bottom: 0.5rem;
-}
-
-.contact-form {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-.form-group textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.contact-form button {
-    background: #FF4D4D;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-    background: #FF0000;
-}
-
-/* Animation Keyframes */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes revealText {
-    from {
-        clip-path: inset(0 100% 0 0);
-    }
-    to {
-        clip-path: inset(0 0 0 0);
-    }
-}
-
-/* Smooth page transitions */
-.intro, .projects, footer {
-    transition: opacity 0.3s ease;
-}
-
-/* Optional: Add smooth scrolling for the whole page */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Media query for reduced animations on mobile */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* Make it responsive */
-@media (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
-
-    nav {
-        margin-bottom: 1rem;
-    }
-
-    .nav-logo {
-        width: 60px;
-        height: 60px;
-    }
-
-    .intro {
-        min-height: calc(100vh - 150px);
-        transform: translateY(-5vh);
-    }
-
-    .intro-content {
-        width: 100%;
-        padding: 0 1rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .location {
-        font-size: 1rem;
-        margin: 1rem auto 2rem;
-    }
-
-    .bio {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 2rem;
-        padding: 0 1rem;
-    }
-
-    .social-icons {
-        gap: 1.5rem;
-    }
-
-    .social-icon {
-        font-size: 1.3rem;
-    }
-
-    .random-blurb {
-        display: none; /* Hide blurb on mobile */
-    }
-
-    .resume-review-container {
-        padding: 1rem;
-    }
-
-    .service-highlights {
-        padding: 1.5rem;
-    }
-
-    .contact-form {
-        padding: 1.5rem;
-    }
-}
-
-/* Add styles for even smaller screens */
-@media (max-width: 480px) {
-    .nav-links a {
-        font-size: 0.9rem;
-        margin-right: 1rem !important;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .bio {
-        font-size: 1rem;
-    }
-
-    .social-icons {
-        gap: 1.2rem;
-    }
-
-    .social-icon {
-        font-size: 1.2rem;
-    }
-
-    .service-description p {
-        font-size: 1rem;
-    }
-
-    .service-highlights h2,
-    .contact-form h2 {
-        font-size: 1.3rem;
-    }
-}
-
-/* Add styles for larger screens */
-@media (min-width: 1200px) {
-    .intro-content {
-        width: 800px;
-    }
-
-    .bio {
-        max-width: 900px;
-    }
-}
-
-/* Thoughts page styles */
-.thoughts-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
-.thought-input {
-    margin-bottom: 3rem;
-}
-
-.thought-input textarea {
-    width: 100%;
-    min-height: 120px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    resize: vertical;
-}
-
-.thought-input button {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
-.thought-input button:hover {
-    background: #444;
-}
-
-.thoughts-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.thought-card {
-    background: #f8f8f8;
-    padding: 1.5rem;
-    border-radius: 8px;
-    animation: fadeInUp 0.5s ease-out forwards;
-}
-
-.thought-text {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.thought-timestamp {
-    font-size: 0.9rem;
+    text-align: center;
     color: #666;
-}
-
-/* Active nav link style */
-nav a.active {
-    font-weight: 600;
-}
-
-.nav-logo-container {
-    position: relative;
-    padding: 10px;
-}
-
-.nav-logo {
-    display: block;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-top: -5px;
-    cursor: pointer;
-}
-
-.nav-profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-}
-
-/* Remove the underline effect for the logo */
-.nav-logo::after {
-    display: none;
-}
-
-.random-blurb {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #333;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.random-blurb::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #333;
-}
-
-/* Add hover state to container */
-.nav-logo-container:hover .random-blurb {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Remove old hover rule */
-.nav-logo:hover + .random-blurb {
-    opacity: 1;
-    visibility: visible;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
-    animation-delay: 1s;
-}
-
-.social-icon {
-    font-size: 1.5rem;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #FF4D4D;
-}
-
-/* Remove underline effect for social icons */
-.social-icon::after {
-    display: none;
 }
 
 /* Testimonials Section */
 .testimonials-section {
-    margin: 3rem 0;
+    max-width: 1200px;
+    margin: 3rem auto;
     padding: 2rem;
     background: #fff;
     border-radius: 12px;
@@ -646,6 +265,139 @@ nav a.active {
     background: #FF4D4D;
 }
 
+.service-highlights {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.service-highlights h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.service-highlights ul {
+    list-style-position: inside;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-highlights li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #FF4D4D;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #FF0000;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealText {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* Smooth page transitions */
+.intro, .projects, footer {
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Add smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media query for reduced animations on mobile */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Make it responsive */
+@media (max-width: 1200px) {
+    .resume-review-container,
+    .testimonials-section,
+    .service-highlights,
+    .contact-form {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .testimonial {
         flex: 0 0 calc(50% - 0.75rem);
@@ -653,6 +405,72 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    nav {
+        margin-bottom: 1rem;
+    }
+
+    .nav-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .intro {
+        min-height: calc(100vh - 150px);
+        transform: translateY(-5vh);
+    }
+
+    .intro-content {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .location {
+        font-size: 1rem;
+        margin: 1rem auto 2rem;
+    }
+
+    .bio {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .social-icons {
+        gap: 1.5rem;
+    }
+
+    .social-icon {
+        font-size: 1.3rem;
+    }
+
+    .random-blurb {
+        display: none;
+    }
+
+    .resume-review-container {
+        padding: 1rem;
+    }
+
+    .service-description p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .service-highlights,
+    .contact-form {
+        padding: 1.5rem;
+    }
+
     .testimonial {
         flex: 0 0 100%;
     }
@@ -660,4 +478,204 @@ nav a.active {
     .testimonials-section {
         padding: 1.5rem;
     }
+}
+
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 0.9rem;
+        margin-right: 1rem !important;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+    }
+
+    .social-icons {
+        gap: 1.2rem;
+    }
+
+    .social-icon {
+        font-size: 1.2rem;
+    }
+
+    .service-description p {
+        font-size: 1rem;
+    }
+
+    .service-highlights h2,
+    .contact-form h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .intro-content {
+        width: 800px;
+    }
+
+    .bio {
+        max-width: 900px;
+    }
+}
+
+.thoughts-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.thought-input {
+    margin-bottom: 3rem;
+}
+
+.thought-input textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.thought-input button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.thought-input button:hover {
+    background: #444;
+}
+
+.thoughts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.thought-card {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.thought-text {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.thought-timestamp {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+nav a.active {
+    font-weight: 600;
+}
+
+.nav-logo-container {
+    position: relative;
+    padding: 10px;
+}
+
+.nav-logo {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.nav-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.nav-logo::after {
+    display: none;
+}
+
+.random-blurb {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.random-blurb::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #333;
+}
+
+.nav-logo-container:hover .random-blurb {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-logo:hover + .random-blurb {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #FF4D4D;
+}
+
+.social-icon::after {
+    display: none;
 }
