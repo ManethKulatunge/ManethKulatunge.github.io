@@ -20,6 +20,39 @@
         <h1>Resume Review Service</h1>
         <div class="service-description">
             <p>I offer professional resume reviews to help you stand out in your job search. With my experience as a Software Engineer at Morgan Stanley, I can provide valuable insights to improve your resume.</p>
+            
+            <div class="testimonials-section">
+                <h2>What Others Say</h2>
+                <div class="testimonials-carousel">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"Maneth's review helped me land my dream job at Google. His insights were invaluable!"</p>
+                            <div class="testimonial-author">- Sarah Chen</div>
+                            <img src="https://images.pexels.com/photos/2422294/pexels-photo-2422294.jpeg" alt="Google Logo" class="company-logo">
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The ATS optimization tips were game-changing. Got multiple interviews after the review."</p>
+                            <div class="testimonial-author">- James Wilson</div>
+                            <img src="https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg" alt="Microsoft Logo" class="company-logo">
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Detailed feedback that actually made a difference. Highly recommend!"</p>
+                            <div class="testimonial-author">- Emily Rodriguez</div>
+                            <img src="https://images.pexels.com/photos/5473950/pexels-photo-5473950.jpeg" alt="Amazon Logo" class="company-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev-btn">❮</button>
+                    <div class="carousel-dots"></div>
+                    <button class="next-btn">❯</button>
+                </div>
+            </div>
+
             <div class="service-highlights">
                 <h2>What You'll Get:</h2>
                 <ul>
@@ -59,6 +92,53 @@
             e.preventDefault();
             alert('Thank you for your interest! This feature is coming soon.');
         });
+
+        // Carousel functionality
+        const carousel = document.querySelector('.testimonials-carousel');
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        let currentIndex = 0;
+
+        // Create dots
+        testimonials.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        function updateCarousel() {
+            testimonials.forEach((testimonial, index) => {
+                testimonial.classList.remove('active');
+                dotsContainer.children[index].classList.remove('active');
+            });
+            testimonials[currentIndex].classList.add('active');
+            dotsContainer.children[currentIndex].classList.add('active');
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            updateCarousel();
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Auto-advance carousel
+        setInterval(nextSlide, 5000);
     </script>
 </body>
 </html>
