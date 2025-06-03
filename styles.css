@@ -326,6 +326,18 @@ h1 {
     font-size: 1rem;
 }
 
+.form-group input[type="file"] {
+    border: 1px dashed #ddd;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+    border-color: #FF4D4D;
+}
+
 .form-group textarea {
     min-height: 120px;
     resize: vertical;
@@ -344,6 +356,11 @@ h1 {
 
 .contact-form button:hover {
     background: #FF0000;
+}
+
+button[type="submit"]:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
 
 /* Animation Keyframes */
