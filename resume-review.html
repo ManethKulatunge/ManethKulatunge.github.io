@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Review | Maneth</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -28,47 +29,50 @@
                 <div class="testimonials-track">
                     <div class="testimonial">
                         <div class="testimonial-content">
-                            <img src="https://images.pexels.com/photos/2422294/pexels-photo-2422294.jpeg" alt="Sarah Chen" class="testimonial-image">
-                            <p>"Maneth's review helped me land my dream job at Google. His insights were invaluable!"</p>
-                            <div class="testimonial-author">Sarah Chen</div>
-                            <div class="testimonial-role">Software Engineer at Google</div>
-                            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google Logo" class="company-logo">
+                            <div class="quote-icon">❝</div>
+                            <div class="testimonial-text">The resume review service helped me transform my internship experiences into compelling achievements. Highly recommended!</div>
+                            <div class="testimonial-footer">
+                                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" alt="Michael Park" class="testimonial-image">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-author">Michael Park</div>
+                                    <div class="testimonial-meta">
+                                        Hired at
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/488px-Apple_logo_black.svg.png" alt="Apple">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="testimonial">
                         <div class="testimonial-content">
-                            <img src="https://images.pexels.com/photos/5473955/pexels-photo-5473955.jpeg" alt="James Wilson" class="testimonial-image">
-                            <p>"The ATS optimization tips were game-changing. Got multiple interviews after the review."</p>
-                            <div class="testimonial-author">James Wilson</div>
-                            <div class="testimonial-role">Senior Developer at Microsoft</div>
-                            <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft Logo" class="company-logo">
+                            <div class="quote-icon">❝</div>
+                            <div class="testimonial-text">The feedback was specific and actionable. It made a huge difference in how I presented my projects and skills.</div>
+                            <div class="testimonial-footer">
+                                <img src="https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg" alt="Lisa Thompson" class="testimonial-image">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-author">Lisa Thompson</div>
+                                    <div class="testimonial-meta">
+                                        Hired at
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/512px-Meta_Platforms_Inc._logo.svg.png" alt="Meta">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="testimonial">
                         <div class="testimonial-content">
-                            <img src="https://images.pexels.com/photos/5473950/pexels-photo-5473950.jpeg" alt="Emily Rodriguez" class="testimonial-image">
-                            <p>"Detailed feedback that actually made a difference. Highly recommend!"</p>
-                            <div class="testimonial-author">Emily Rodriguez</div>
-                            <div class="testimonial-role">Full Stack Engineer at Amazon</div>
-                            <img src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png" alt="Amazon Logo" class="company-logo">
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg" alt="Michael Chang" class="testimonial-image">
-                            <p>"The resume review service helped me transition from a startup to Meta. Great investment!"</p>
-                            <div class="testimonial-author">Michael Chang</div>
-                            <div class="testimonial-role">Product Engineer at Meta</div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/512px-Meta_Platforms_Inc._logo.svg.png" alt="Meta Logo" class="company-logo">
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <div class="testimonial-content">
-                            <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg" alt="Emma Davis" class="testimonial-image">
-                            <p>"The structured approach to highlighting achievements made all the difference in my job search."</p>
-                            <div class="testimonial-author">Emma Davis</div>
-                            <div class="testimonial-role">Software Engineer at Apple</div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/488px-Apple_logo_black.svg.png" alt="Apple Logo" class="company-logo">
+                            <div class="quote-icon">❝</div>
+                            <div class="testimonial-text">The insights provided were game-changing. I secured multiple interviews within weeks of updating my resume.</div>
+                            <div class="testimonial-footer">
+                                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="David Kumar" class="testimonial-image">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-author">David Kumar</div>
+                                    <div class="testimonial-meta">
+                                        Hired at
+                                        <img src="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png" alt="Netflix">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,7 +124,6 @@
             alert('Thank you for your interest! This feature is coming soon.');
         });
 
-        // Carousel functionality
         const track = document.querySelector('.testimonials-track');
         const testimonials = document.querySelectorAll('.testimonial');
         const prevBtn = document.querySelector('.prev-btn');
@@ -130,7 +133,6 @@
         const slidesToShow = window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 2 : 1;
         const totalSlides = testimonials.length;
 
-        // Create dots
         const totalDots = Math.ceil(totalSlides / slidesToShow);
         for (let i = 0; i < totalDots; i++) {
             const dot = document.createElement('button');
@@ -144,7 +146,6 @@
             const offset = -(currentIndex * (100 / slidesToShow));
             track.style.transform = `translateX(${offset}%)`;
             
-            // Update dots
             const activeDotIndex = Math.floor(currentIndex / slidesToShow);
             document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
                 dot.classList.toggle('active', index === activeDotIndex);
@@ -176,7 +177,6 @@
         prevBtn.addEventListener('click', prevSlide);
         nextBtn.addEventListener('click', nextSlide);
 
-        // Handle window resize
         window.addEventListener('resize', () => {
             const newSlidesToShow = window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 2 : 1;
             if (newSlidesToShow !== slidesToShow) {
@@ -184,7 +184,6 @@
             }
         });
 
-        // Auto-advance carousel
         setInterval(() => {
             if (currentIndex < totalSlides - slidesToShow) {
                 nextSlide();
