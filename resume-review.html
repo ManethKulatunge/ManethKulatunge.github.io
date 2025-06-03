@@ -6,6 +6,7 @@
     <title>Resume Review | Maneth</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <nav>
@@ -23,8 +24,7 @@
             <p>I offer professional resume reviews to help you stand out in your job search. With my experience as a Software Engineer at Morgan Stanley, I can provide valuable insights to improve your resume.</p>
         </div>
 
-              <div class="testimonials-section">
-            <!-- <h2>Success Stories</h2> -->
+        <div class="testimonials-section">
             <div class="testimonials-carousel">
                 <div class="testimonials-track">
                     <div class="testimonial">
@@ -89,15 +89,19 @@
             <form id="reviewForm">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume (PDF only)</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message (Optional)</label>
-                    <textarea id="message"></textarea>
+                    <textarea id="message" name="message"></textarea>
                 </div>
                 <button type="submit">Submit Request</button>
             </form>
@@ -109,9 +113,53 @@
     </footer>
 
     <script>
-        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        // Initialize EmailJS
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+
+        document.getElementById('reviewForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            alert('Thank you for your interest! This feature is coming soon.');
+            
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            try {
+                const formData = new FormData(this);
+                const file = formData.get('resume');
+                
+                // Convert file to base64
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                
+                reader.onload = async function() {
+                    try {
+                        await emailjs.send(
+                            "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+                            "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+                            {
+                                name: formData.get('name'),
+                                email: formData.get('email'),
+                                message: formData.get('message'),
+                                resume: reader.result
+                            }
+                        );
+                        
+                        alert('Your request has been sent successfully! I will get back to you soon.');
+                        document.getElementById('reviewForm').reset();
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('Sorry, there was an error sending your request. Please try again later.');
+                    } finally {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Submit Request';
+                    }
+                };
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Sorry, there was an error processing your file. Please try again.');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Request';
+            }
         });
 
         const track = document.querySelector('.testimonials-track');
