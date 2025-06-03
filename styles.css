@@ -136,16 +136,6 @@ h1 {
     padding: 2rem;
     background: #fff;
     border-radius: 12px;
-    position: relative;
-}
-
-.testimonials-section::before {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    border-radius: 14px;
-    background: linear-gradient(45deg, #FF4D4D, #FF0000);
-    z-index: -1;
 }
 
 .testimonials-section h2 {
