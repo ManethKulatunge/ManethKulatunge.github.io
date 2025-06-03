@@ -105,6 +105,96 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
+/* Resume Review Styles */
+.resume-review-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.service-description {
+    margin-bottom: 3rem;
+}
+
+.service-description p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.service-highlights {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.service-highlights h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-highlights ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.service-highlights li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #FF4D4D;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #FF0000;
+}
+
 /* Animation Keyframes */
 @keyframes fadeInUp {
     from {
@@ -199,6 +289,18 @@ html {
     .random-blurb {
         display: none; /* Hide blurb on mobile */
     }
+
+    .resume-review-container {
+        padding: 1rem;
+    }
+
+    .service-highlights {
+        padding: 1.5rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
 }
 
 /* Add styles for even smaller screens */
@@ -222,6 +324,15 @@ html {
 
     .social-icon {
         font-size: 1.2rem;
+    }
+
+    .service-description p {
+        font-size: 1rem;
+    }
+
+    .service-highlights h2,
+    .contact-form h2 {
+        font-size: 1.3rem;
     }
 }
 
@@ -386,7 +497,7 @@ nav a.active {
 }
 
 .social-icon {
-    font-size: 1.5rem; /* Made slightly larger */
+    font-size: 1.5rem;
     color: #333;
     transition: color 0.3s ease;
 }
@@ -398,4 +509,4 @@ nav a.active {
 /* Remove underline effect for social icons */
 .social-icon::after {
     display: none;
-} 
+}
